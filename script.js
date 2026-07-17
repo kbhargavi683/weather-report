@@ -6,10 +6,10 @@ let API_URL;
 
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
     // Local development
-    API_URL = 'https://weather-report-1-e049.onrender.com';
+    API_URL = 'http://localhost:5000';
 } else {
     
-    API_URL = 'https://your-backend-url.onrender.com'; 
+    API_URL = 'https://weather-report-1-e049.onrender.com'; 
 }
 
 console.log('🌤️ API URL:', API_URL);
