@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌤️ Weather Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="navbar">
+        <div class="brand">⛅ Weather<span>Report</span></div>
+        <div class="nav-links">
+            <span class="active">🏠 Home</span>
+            <span id="locationBtn">📍 My Location</span>
+            <span id="notifBtn">🔔 Notify</span>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>🌍 Live Weather Report</h1>
+        <p>Real-time weather for any city, town, or village</p>
+    </div>
+
+    <div class="search-area">
+        <div class="search-row">
+            <div class="search-field">
+                <label>📍 City / Village</label>
+                <input id="cityInput" placeholder="Enter location...">
+            </div>
+            <div class="search-field">
+                <label>📍 State (optional but recommended)</label>
+                <input id="stateInput" placeholder="e.g. Telangana">
+            </div>
+        </div>
+        <div class="search-actions">
+            <button id="searchBtn">🔍 Get Weather</button>
+            <button id="randomBtn">🎲 Random</button>
+        </div>
+    </div>
+
+    <div id="result">
+        <div class="loading">👋 Welcome! Enter a location to get started</div>
+    </div>
+
+    <div class="footer">© 2026 WeatherReport · OpenStreetMap & Open-Meteo</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #f5f5fa;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(15, 12, 41, 0.6);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 28px 24px;
+    backdrop-filter: blur(20px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+}
+.brand span { color: #7f5af0; }
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    color: rgba(245, 245, 250, 0.7);
+    flex-wrap: wrap;
+}
+
+.nav-links span {
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.nav-links span:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+.nav-links .active { color: white; }
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #f5f5fa, #b8b3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero p {
+    color: rgba(245, 245, 250, 0.6);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.search-area {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.search-field { flex: 1; }
+.search-field label {
+    display: block;
+    font-size: 11px;
+    color: rgba(245, 245, 250, 0.6);
+    margin-bottom: 4px;
+}
+.search-field input {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+.search-field input:focus {
+    border-color: #7f5af0;
+    background: rgba(255, 255, 255, 0.1);
+}
+.search-field input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-actions {
+    display: flex;
+    gap: 10px;
+}
+.search-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+#searchBtn {
+    background: linear-gradient(135deg, #7f5af0, #6246ea);
+    color: white;
+    flex: 1;
+}
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(127, 90, 240, 0.3);
+}
+
+#randomBtn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f5f5fa;
+}
+#randomBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#result {
+    min-height: 180px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.loading {
+    text-align: center;
+    color: rgba(245, 245, 250, 0.4);
+    padding: 20px;
+}
+
+.weather-card {
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.weather-city {
+    font-size: 24px;
+    font-weight: 700;
+}
+.weather-region {
+    font-size: 13px;
+    color: rgba(245, 245, 250, 0.6);
+    margin-top: 2px;
+}
+.weather-icon {
+    font-size: 40px;
+}
+
+.weather-temp {
+    display: flex;
+    align-items: flex-start;
+    margin: 8px 0;
+}
+.weather-temp .temp {
+    font-size: 48px;
+    font-weight: 800;
+}
+.weather-temp .unit {
+    font-size: 20px;
+    color: rgba(245, 245, 250, 0.5);
+    margin-top: 6px;
+    margin-left: 2px;
+}
+
+.weather-desc {
+    color: rgba(245, 245, 250, 0.7);
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.weather-grid .item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 12px;
+    text-align: center;
+}
+.weather-grid .item .icon {
+    font-size: 18px;
+}
+.weather-grid .item .label {
+    font-size: 10px;
+    color: rgba(245, 245, 250, 0.4);
+    text-transform: uppercase;
+    margin: 4px 0;
+}
+.weather-grid .item .value {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.error {
+    text-align: center;
+    color: #fc8181;
+    padding: 20px;
+}
+.error .icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 8px;
+}
+.error small {
+    color: rgba(245, 245, 250, 0.3);
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(245, 245, 250, 0.2);
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 600px) {
+    .container { padding: 16px; }
+    .search-row { flex-direction: column; }
+    .search-actions { flex-direction: column; }
+    .weather-grid { grid-template-columns: 1fr 1fr; }
+    .weather-top { flex-direction: column; align-items: center; text-align: center; }
+    .weather-temp { justify-content: center; }
+    .navbar { flex-direction: column; align-items: center; text-align: center; }
+}
+
+@media (max-width: 400px) {
+    .weather-grid { grid-template-columns: 1fr; }
+    .weather-temp .temp { font-size: 36px; }
+}
